@@ -1,1 +1,8 @@
 https://imgur.com/oQUvCRR
+Server: Provides resources, services, or applications
+Domain Name:Human-readable name to identify the website
+DNS Record (www):Indicates the web server that hosts the website
+Web Server (Nginx):Handles incoming HTTP requests and serves static content
+Application Server:Processes dynamic content and communicates with the web server to serve responses
+Application Files:Codebase that contains the logic and functionality of the website
+Database (MySQL):Stores and retrieves data for the application server
