@@ -1,0 +1,13 @@
+https://imgur.com/w7rMaJv
+Firewall: network security device
+Load Balancer: HAproxy
+App Server: runs the application code
+Database: MySQL
+SSL Certificate: secure socket layer certificate for HTTPS encryption
+Monitoring Client: data collector for monitoring services (e.g. Sumo Logic)
+Monitoring Tool: tool for monitoring system performance (e.g. Nagios, Zabbix)
+In this design, three firewalls are added to secure the infrastructure. An SSL certificate is added to serve encrypted traffic over HTTPS. Three monitoring clients are added to collect data and send it to a monitoring tool such as Nagios or Zabbix.
+
+The load balancer is responsible for distributing traffic between the three servers, each running a copy of the application code. The database is replicated across two servers to ensure high availability and to allow for failover in the event of an outage. The SSL certificate terminates at the load balancer level, which can be an issue as it introduces a single point of failure.
+
+Having servers with identical components may result in a single point of failure or bottlenecks in the system. For example, having a single MySQL server that can accept writes can limit the system's ability to scale and can lead to downtime during maintenance or upgrades. To monitor web server QPS, one can use a monitoring tool such as Nagios or Zabbix to collect data on the server's requests per second and other relevant metrics.
