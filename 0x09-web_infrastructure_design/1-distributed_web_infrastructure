@@ -1,1 +1,21 @@
 https://imgur.com/9ksAsxh
+In this diagram, we have added two additional servers to the infrastructure, along with an HAproxy load balancer. The LB distributes incoming requests between the two web servers using a Round Robin algorithm. The infrastructure includes a set of application files that are hosted on the app server, and a MySQL database that is shared by both the app servers.
+
+The addition of the second web server and the load balancer allows us to distribute incoming traffic and achieve better performance and availability. The load balancer provides an additional layer of redundancy, allowing us to handle failures in the web servers and ensuring that incoming requests are always processed.
+
+The load balancer is configured with a Round Robin distribution algorithm, which distributes incoming requests evenly between the web servers. This ensures that each server is used equally and prevents overloading of a single server.
+
+The load balancer enables an Active-Active setup, which means that both web servers are active and processing incoming requests at the same time. In an Active-Passive setup, only one server would be active at a time, with the other server serving as a backup in case of failure.
+
+The database is configured as a Primary-Replica (Master-Slave) cluster, with the primary node handling all writes and the replica node(s) handling all reads. This allows us to distribute the load and ensure that the database can handle a high volume of traffic.
+
+The primary node is responsible for handling all writes to the database, while the replica node(s) are responsible for handling all reads. This allows us to distribute the load and prevent overloading of the primary node, which could result in slower response times and potential downtime.
+
+Some of the issues with this infrastructure include:
+
+Single point of failure: There is no redundancy or failover mechanism for the load balancer, which could result in downtime if it fails.
+Security issues: There is no firewall or HTTPS implementation, which could make the infrastructure vulnerable to attacks.
+No monitoring: There is no monitoring system in place to track the performance and availability of the infrastructure.
+
+
+
