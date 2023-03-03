@@ -1,0 +1,20 @@
+https://imgur.com/ZrNgVIc
+The infrastructure includes the following components:
+
+Firewall: a security mechanism that filters incoming and outgoing traffic, only allowing authorized traffic to pass through.
+
+Load Balancer Cluster: a cluster of two or more load balancers that distribute incoming traffic across multiple servers to ensure high availability and scalability. HAProxy is used as the load balancer software.
+
+Web Server: a server that serves static content (such as HTML, CSS, and JavaScript files) and handles HTTP requests from clients.
+
+Application Server: a server that runs application code and handles dynamic content generation based on user requests.
+
+Database Server: a server that stores data used by the application code.
+
+Application Code: the code that is executed by the application server to generate dynamic content.
+
+By splitting each component into its own server, we can achieve greater isolation and scalability. The load balancer cluster ensures that incoming traffic is distributed evenly across multiple web and application servers, which can handle the load more efficiently.
+
+The web server serves static content, such as HTML and CSS files, while the application server generates dynamic content based on user requests. The application server communicates with the database server to retrieve or store data as needed.
+
+With this infrastructure, we can achieve higher availability and scalability, as well as greater security and isolation.
